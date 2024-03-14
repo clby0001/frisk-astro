@@ -1,0 +1,19 @@
+---
+import Skelet from "../layouts/Skelet.astro";
+import Kort from "../komponenter/Kort.astro";
+const tid = new Date();
+---
+
+
+<skelet titel="Forside">
+	<h2>Fronmatter: <span>{tid}</span></h2>
+	<h2>Client side: <span id="nytid">Ny tid</span></h2>
+<kort navn="peter" email="peter@kea.dk" tlf="12345678"></kort>
+<kort navn="peter" email="peter@kea.dk" tlf="12345678"></kort>
+<kort navn="peter" email="peter@kea.dk" tlf="12345678"></kort>
+</skelet>
+
+<script>
+	const nytid = new Date();
+	document.querySelector("#nytid").textContent=nytid;
+</script>
